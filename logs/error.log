@@ -1,0 +1,1528 @@
+2025-06-22 18:33:30:3330 [31merror[39m: [31mUNCAUGHT EXCEPTION! Shutting down...[39m
+2025-06-22 18:33:44:3344 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 18:33:54:3354 [31merror[39m: [31mUNCAUGHT EXCEPTION! Shutting down...[39m
+2025-06-22 18:34:08:348 [31merror[39m: [31mUNCAUGHT EXCEPTION! Shutting down...[39m
+2025-06-22 18:34:17:3417 [31merror[39m: [31mUNCAUGHT EXCEPTION! Shutting down...[39m
+2025-06-22 18:47:22:4722 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 18:50:11:5011 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 18:50:32:5032 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 18:56:37:5637 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 19:15:47:1547 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 19:29:48:2948 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 20:34:21:3421 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 21:25:04:254 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 21:37:15:3715 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 21:39:05:395 [31merror[39m: [31mError caught by error handler: 400[39m
+2025-06-22 21:43:26:4326 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-22 21:43:48:4348 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-22 21:46:54:4654 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/auth.controller.ts:20:44[39m
+
+[31m  17 const { email, password, name } = req.body[39m
+[31m  18 [39m
+[31m  19 // Check if user already exists[39m
+[31m→ 20 const existingUser = await prisma.user.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 21:47:21:4721 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/auth.controller.ts:32:36[39m
+
+[31m  29 const hashedPassword = await bcrypt.hash(password, 12)[39m
+[31m  30 [39m
+[31m  31 // Create user[39m
+[31m→ 32 const user = await prisma.user.create({[39m
+[31m       data: {[39m
+[31m         email: "lekadeyemi129@gmail.com",[39m
+[31m         password: "$2a$12$klMFVQZWV2GIPkfccHHU2uV8.mbWKyMrWntjiNIgLs0hhqOuSPADu",[39m
+[31m         ~~~~~~~~[39m
+[31m         name: "lek Adeyemi",[39m
+[31m         role: "USER",[39m
+[31m     ?   id?: String,[39m
+[31m     ?   createdAt?: DateTime,[39m
+[31m     ?   updatedAt?: DateTime,[39m
+[31m     ?   rooms?: RoomCreateNestedManyWithoutCreatorInput,[39m
+[31m     ?   votes?: VoteCreateNestedManyWithoutUserInput[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown argument `password`. Available options are marked with ?.[39m
+2025-06-22 21:55:44:5544 [31merror[39m: [31mError caught by error handler: secretOrPrivateKey must have a value[39m
+2025-06-22 22:01:45:145 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 22:02:06:26 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 22:03:23:323 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/auth.controller.ts:17:44[39m
+
+[31m  14 const { email, password, name } = req.body;[39m
+[31m  15 [39m
+[31m  16 // Check if user already exists[39m
+[31m→ 17 const existingUser = await prisma.user.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 22:10:31:1031 [31merror[39m: [31mError caught by error handler: User with this email already exists[39m
+2025-06-22 22:13:30:1330 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/auth.controller.ts:73:36[39m
+
+[31m  70 const { email, password } = req.body;[39m
+[31m  71 [39m
+[31m  72 // Find user with password[39m
+[31m→ 73 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 22:14:48:1448 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/auth.controller.ts:73:36[39m
+
+[31m  70 const { email, password } = req.body;[39m
+[31m  71 [39m
+[31m  72 // Find user with password[39m
+[31m→ 73 const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-22 22:15:28:1528 [31merror[39m: [31mError caught by error handler: JWT_REFRESH_SECRET environment variable is required[39m
+2025-06-23 03:54:59:5459 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-23 04:02:23:223 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-23 04:02:45:245 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:02:46:246 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:03:06:36 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:03:14:314 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:15:46:1546 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:15:47:1547 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:15:49:1549 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:15:51:1551 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:19:18:1918 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:19:18:1918 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:19:39:1939 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:19:52:1952 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:21:56:2156 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-23 04:22:31:2231 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:22:31:2231 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:22:2722 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:22:2722 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:41:2741 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:41:2741 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:42:2742 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 04:27:45:2745 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 21:10:20:1020 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-23 21:13:50:1350 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 21:13:51:1351 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:48:43[39m
+
+[31m  45 const decoded = jwt.verify(token, config.jwtSecret) as JwtPayload[39m
+[31m  46 [39m
+[31m  47 // 3) Check if user still exists[39m
+[31m→ 48 const currentUser = await prisma.user.findUnique({[39m
+[31m       where: {[39m
+[31m         id: undefined,[39m
+[31m     ?   email?: String,[39m
+[31m     ?   AND?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   OR?: UserWhereInput[],[39m
+[31m     ?   NOT?: UserWhereInput | UserWhereInput[],[39m
+[31m     ?   password?: StringFilter | String,[39m
+[31m     ?   name?: StringFilter | String,[39m
+[31m     ?   role?: EnumRoleFilter | Role,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   rooms?: RoomListRelationFilter,[39m
+[31m     ?   votes?: VoteListRelationFilter[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.[39m
+2025-06-23 21:17:33:1733 [31merror[39m: [31mError caught by error handler: Invalid token structure. Please log in again.[39m
+2025-06-23 21:19:06:196 [31merror[39m: [31mError caught by error handler: Invalid token structure. Please log in again.[39m
+2025-06-23 21:19:06:196 [31merror[39m: [31mError caught by error handler: Invalid token structure. Please log in again.[39m
+2025-06-23 21:20:16:2016 [31merror[39m: [31mError caught by error handler: Invalid token structure. Please log in again.[39m
+2025-06-23 21:20:16:2016 [31merror[39m: [31mError caught by error handler: Invalid token structure. Please log in again.[39m
+2025-06-23 21:21:47:2147 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:126:37[39m
+
+[31m  123   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  124 }[39m
+[31m  125 [39m
+[31m→ 126 const rooms = await prisma.room.findMany({[39m
+[31m        where: {[39m
+[31m          createdById: "cmc85d88800006pkmlu1ovy4q",[39m
+[31m          ~~~~~~~~~~~[39m
+[31m      ?   AND?: RoomWhereInput | RoomWhereInput[],[39m
+[31m      ?   OR?: RoomWhereInput[],[39m
+[31m      ?   NOT?: RoomWhereInput | RoomWhereInput[],[39m
+[31m      ?   id?: StringFilter | String,[39m
+[31m      ?   title?: StringFilter | String,[39m
+[31m      ?   description?: StringNullableFilter | String | Null,[39m
+[31m      ?   isActive?: BoolFilter | Boolean,[39m
+[31m      ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m      ?   updatedAt?: DateTimeFilter | DateTime,[39m
+[31m      ?   creatorId?: StringFilter | String,[39m
+[31m      ?   creator?: UserScalarRelationFilter | UserWhereInput,[39m
+[31m      ?   votes?: VoteListRelationFilter[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          options: true,[39m
+[31m          _count: {[39m
+[31m            select: {[39m
+[31m              votes: true[39m
+[31m            }[39m
+[31m          }[39m
+[31m        },[39m
+[31m        orderBy: {[39m
+[31m          createdAt: "desc"[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mUnknown argument `createdById`. Available options are marked with ?.[39m
+2025-06-23 21:23:29:2329 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/middleware/auth.middleware.ts:60:43[39m
+
+[31m  57 }[39m
+[31m  58 [39m
+[31m  59 // 3) Check if user still exists[39m
+[31m→ 60 const currentUser = await prisma.user.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-23 21:23:56:2356 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:126:37[39m
+
+[31m  123   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  124 }[39m
+[31m  125 [39m
+[31m→ 126 const rooms = await prisma.room.findMany({[39m
+[31m        where: {[39m
+[31m          creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          options: true,[39m
+[31m          ~~~~~~~[39m
+[31m          _count: {[39m
+[31m            select: {[39m
+[31m              votes: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   creator?: true,[39m
+[31m      ?   votes?: true[39m
+[31m        },[39m
+[31m        orderBy: {[39m
+[31m          createdAt: "desc"[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:24:36:2436 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:126:37[39m
+
+[31m  123   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  124 }[39m
+[31m  125 [39m
+[31m→ 126 const rooms = await prisma.room.findMany({[39m
+[31m        where: {[39m
+[31m          creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          options: true,[39m
+[31m          ~~~~~~~[39m
+[31m          _count: {[39m
+[31m            select: {[39m
+[31m              votes: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   creator?: true,[39m
+[31m      ?   votes?: true[39m
+[31m        },[39m
+[31m        orderBy: {[39m
+[31m          createdAt: "desc"[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:24:37:2437 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:126:37[39m
+
+[31m  123   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  124 }[39m
+[31m  125 [39m
+[31m→ 126 const rooms = await prisma.room.findMany({[39m
+[31m        where: {[39m
+[31m          creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          options: true,[39m
+[31m          ~~~~~~~[39m
+[31m          _count: {[39m
+[31m            select: {[39m
+[31m              votes: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   creator?: true,[39m
+[31m      ?   votes?: true[39m
+[31m        },[39m
+[31m        orderBy: {[39m
+[31m          createdAt: "desc"[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:45:32:4532 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc9jyxbw00006pus7daxks9q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:46:12:4612 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:46:15:4615 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:46:31:4631 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:46:39:4639 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 21:47:57:4757 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 21:47:58:4758 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:96:35[39m
+
+[31m  93   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m  94 }[39m
+[31m  95 [39m
+[31m→ 96 const rooms = await prisma.room.findMany({[39m
+[31m       where: {[39m
+[31m         creatorId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m       },[39m
+[31m       include: {[39m
+[31m         options: true,[39m
+[31m         ~~~~~~~[39m
+[31m         votes: true,[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             votes: true[39m
+[31m           }[39m
+[31m         },[39m
+[31m     ?   creator?: true[39m
+[31m       },[39m
+[31m       orderBy: {[39m
+[31m         createdAt: "desc"[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown field `options` for include statement on model `Room`. Available options are marked with ?.[39m
+2025-06-23 22:11:12:1112 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:17:32:1732 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-23 22:17:33:1733 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-23 22:18:43:1843 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:32:17:3217 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:35:00:350 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:36:18:3618 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:36:35:3635 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-23 22:44:34:4434 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-24 18:06:14:614 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 18:07:09:79 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-24 18:19:14:1914 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-24 18:19:54:1954 [31merror[39m: [31mError caught by error handler: Validation failed: body: Required[39m
+2025-06-24 18:30:56:3056 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 18:31:44:3144 [31merror[39m: [31mError caught by error handler: Validation failed: email: Required, password: Required[39m
+2025-06-24 18:32:14:3214 [31merror[39m: [31mError caught by error handler: Validation failed: email: Required, password: Required[39m
+2025-06-24 18:32:48:3248 [31merror[39m: [31mError caught by error handler: Validation failed: email: Required, password: Required[39m
+2025-06-24 18:36:35:3635 [31merror[39m: [31mError caught by error handler: Room not found[39m
+2025-06-24 18:58:15:5815 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 19:17:16:1716 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 19:37:03:373 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 19:38:28:3828 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 19:49:41:4941 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:84:36[39m
+
+[31m  81 static getVoteResults = catchAsync(async (req: Request, res: Response, next: NextFunction) => {[39m
+[31m  82   const { roomId } = req.params[39m
+[31m  83 [39m
+[31m→ 84   const room = await prisma.room.findUnique({[39m
+[31m         where: {[39m
+[31m           id: "cmcat4py400016ppiy7t5eubr"[39m
+[31m         },[39m
+[31m         include: {[39m
+[31m           options: {[39m
+[31m           ~~~~~~~[39m
+[31m             include: {[39m
+[31m               _count: {[39m
+[31m                 select: {[39m
+[31m                   votes: true[39m
+[31m                 }[39m
+[31m               }[39m
+[31m             }[39m
+[31m           },[39m
+[31m       ?   creator?: true,[39m
+[31m       ?   votes?: true[39m
+[31m         }[39m
+[31m       })[39m
+
+[31mInvalid scalar field `options` for include statement on model Room. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:49:42:4942 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:168:36[39m
+
+[31m  165   return next(new AppError("You must be logged in to view your vote", 401))[39m
+[31m  166 }[39m
+[31m  167 [39m
+[31m→ 168 const vote = await prisma.vote.findFirst({[39m
+[31m        where: {[39m
+[31m          roomId: "cmcat4py400016ppiy7t5eubr",[39m
+[31m          userId: "cmc85d88800006pkmlu1ovy4q"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          option: {[39m
+[31m          ~~~~~~[39m
+[31m            select: {[39m
+[31m              id: true,[39m
+[31m              text: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   user?: true,[39m
+[31m      ?   room?: true[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mInvalid scalar field `option` for include statement on model Vote. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:50:34:5034 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:84:36[39m
+
+[31m  81 static getVoteResults = catchAsync(async (req: Request, res: Response, next: NextFunction) => {[39m
+[31m  82   const { roomId } = req.params[39m
+[31m  83 [39m
+[31m→ 84   const room = await prisma.room.findUnique({[39m
+[31m         where: {[39m
+[31m           id: "cmcat4py400016ppiy7t5eubr"[39m
+[31m         },[39m
+[31m         include: {[39m
+[31m           options: {[39m
+[31m           ~~~~~~~[39m
+[31m             include: {[39m
+[31m               _count: {[39m
+[31m                 select: {[39m
+[31m                   votes: true[39m
+[31m                 }[39m
+[31m               }[39m
+[31m             }[39m
+[31m           },[39m
+[31m       ?   creator?: true,[39m
+[31m       ?   votes?: true[39m
+[31m         }[39m
+[31m       })[39m
+
+[31mInvalid scalar field `options` for include statement on model Room. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:50:35:5035 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:168:36[39m
+
+[31m  165   return next(new AppError("You must be logged in to view your vote", 401))[39m
+[31m  166 }[39m
+[31m  167 [39m
+[31m→ 168 const vote = await prisma.vote.findFirst({[39m
+[31m        where: {[39m
+[31m          roomId: "cmcat4py400016ppiy7t5eubr",[39m
+[31m          userId: "cmcaurhhj00026ppi705v637t"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          option: {[39m
+[31m          ~~~~~~[39m
+[31m            select: {[39m
+[31m              id: true,[39m
+[31m              text: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   user?: true,[39m
+[31m      ?   room?: true[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mInvalid scalar field `option` for include statement on model Vote. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:51:33:5133 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:84:36[39m
+
+[31m  81 static getVoteResults = catchAsync(async (req: Request, res: Response, next: NextFunction) => {[39m
+[31m  82   const { roomId } = req.params[39m
+[31m  83 [39m
+[31m→ 84   const room = await prisma.room.findUnique({[39m
+[31m         where: {[39m
+[31m           id: "cmcat4py400016ppiy7t5eubr"[39m
+[31m         },[39m
+[31m         include: {[39m
+[31m           options: {[39m
+[31m           ~~~~~~~[39m
+[31m             include: {[39m
+[31m               _count: {[39m
+[31m                 select: {[39m
+[31m                   votes: true[39m
+[31m                 }[39m
+[31m               }[39m
+[31m             }[39m
+[31m           },[39m
+[31m       ?   creator?: true,[39m
+[31m       ?   votes?: true[39m
+[31m         }[39m
+[31m       })[39m
+
+[31mInvalid scalar field `options` for include statement on model Room. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:51:33:5133 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:168:36[39m
+
+[31m  165   return next(new AppError("You must be logged in to view your vote", 401))[39m
+[31m  166 }[39m
+[31m  167 [39m
+[31m→ 168 const vote = await prisma.vote.findFirst({[39m
+[31m        where: {[39m
+[31m          roomId: "cmcat4py400016ppiy7t5eubr",[39m
+[31m          userId: "cmcaurhhj00026ppi705v637t"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          option: {[39m
+[31m          ~~~~~~[39m
+[31m            select: {[39m
+[31m              id: true,[39m
+[31m              text: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   user?: true,[39m
+[31m      ?   room?: true[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mInvalid scalar field `option` for include statement on model Vote. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:53:38:5338 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:84:36[39m
+
+[31m  81 static getVoteResults = catchAsync(async (req: Request, res: Response, next: NextFunction) => {[39m
+[31m  82   const { roomId } = req.params[39m
+[31m  83 [39m
+[31m→ 84   const room = await prisma.room.findUnique({[39m
+[31m         where: {[39m
+[31m           id: "cmcat4py400016ppiy7t5eubr"[39m
+[31m         },[39m
+[31m         include: {[39m
+[31m           options: {[39m
+[31m           ~~~~~~~[39m
+[31m             include: {[39m
+[31m               _count: {[39m
+[31m                 select: {[39m
+[31m                   votes: true[39m
+[31m                 }[39m
+[31m               }[39m
+[31m             }[39m
+[31m           },[39m
+[31m       ?   creator?: true,[39m
+[31m       ?   votes?: true[39m
+[31m         }[39m
+[31m       })[39m
+
+[31mInvalid scalar field `options` for include statement on model Room. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 19:53:38:5338 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:168:36[39m
+
+[31m  165   return next(new AppError("You must be logged in to view your vote", 401))[39m
+[31m  166 }[39m
+[31m  167 [39m
+[31m→ 168 const vote = await prisma.vote.findFirst({[39m
+[31m        where: {[39m
+[31m          roomId: "cmcat4py400016ppiy7t5eubr",[39m
+[31m          userId: "cmcaurhhj00026ppi705v637t"[39m
+[31m        },[39m
+[31m        include: {[39m
+[31m          option: {[39m
+[31m          ~~~~~~[39m
+[31m            select: {[39m
+[31m              id: true,[39m
+[31m              text: true[39m
+[31m            }[39m
+[31m          },[39m
+[31m      ?   user?: true,[39m
+[31m      ?   room?: true[39m
+[31m        }[39m
+[31m      })[39m
+
+[31mInvalid scalar field `option` for include statement on model Vote. Available options are marked with ?.[39m
+[31mNote that include statements only accept relation fields.[39m
+2025-06-24 20:01:45:145 [31merror[39m: [31mError caught by error handler: Validation failed: params: Required, body: Required[39m
+2025-06-24 20:02:08:28 [31merror[39m: [31mError caught by error handler: Validation failed: params: Required, body: Required[39m
+2025-06-24 20:03:00:30 [31merror[39m: [31mError caught by error handler: Validation failed: params: Required, body: Required[39m
+2025-06-24 20:04:30:430 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 20:08:19:819 [31merror[39m: [31mError caught by error handler: Validation failed: params: Required, body: Required[39m
+2025-06-24 20:12:57:1257 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 20:15:16:1516 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:15:17:1517 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:15:26:1526 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:15:26:1526 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:15:44:1544 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:16:10:1610 [31merror[39m: [31mError caught by error handler: Validation failed: params.roomId: Invalid room ID[39m
+2025-06-24 20:27:31:2731 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-24 20:28:35:2835 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:73:44[39m
+
+[31m  70   whereClause.guestId = voterId[39m
+[31m  71 }[39m
+[31m  72 [39m
+[31m→ 73 const existingVote = await prisma.vote.findFirst({[39m
+[31m       where: {[39m
+[31m         roomId: "cmcat4py400016ppiy7t5eubr",[39m
+[31m         guestId: "guest_1750793315156_0.4966271838251193",[39m
+[31m         ~~~~~~~[39m
+[31m     ?   AND?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   OR?: VoteWhereInput[],[39m
+[31m     ?   NOT?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   id?: StringFilter | String,[39m
+[31m     ?   option?: StringFilter | String,[39m
+[31m     ?   userId?: StringFilter | String,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   user?: UserScalarRelationFilter | UserWhereInput,[39m
+[31m     ?   room?: RoomScalarRelationFilter | RoomWhereInput[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown argument `guestId`. Available options are marked with ?.[39m
+2025-06-24 20:42:06:426 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 20:42:51:4251 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-24 21:24:40:2440 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-24 21:46:40:4640 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-24 21:47:22:4722 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-24 21:47:49:4749 [31merror[39m: [31mError caught by error handler: Failed to create room: [39m
+[31mInvalid `prisma.room.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:199:36[39m
+
+[31m  196 console.log("Final room data for Prisma:", roomData)[39m
+[31m  197 [39m
+[31m  198 try {[39m
+[31m→ 199   const room = await prisma.room.create([39m
+[31mThe column `options` does not exist in the current database.[39m
+2025-06-24 21:49:14:4914 [31merror[39m: [31mError caught by error handler: The user belonging to this token does no longer exist.[39m
+2025-06-24 21:49:43:4943 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-24 21:50:04:504 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-24 21:50:23:5023 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 00:18:14:1814 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:18:49:1849 [31merror[39m: [31mError caught by error handler: Failed to create room: [39m
+[31mInvalid `prisma.room.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:199:36[39m
+
+[31m  196 console.log("Final room data for Prisma:", roomData)[39m
+[31m  197 [39m
+[31m  198 try {[39m
+[31m→ 199   const room = await prisma.room.create([39m
+[31mThe column `options` does not exist in the current database.[39m
+2025-06-25 00:23:11:2311 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:52:46:5246 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 00:52:56:5256 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 00:53:04:534 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 00:53:34:5334 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:53:53:5353 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:57:27:5727 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:58:15:5815 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 00:58:48:5848 [31merror[39m: [31mError caught by error handler: Failed to create room: [39m
+[31mInvalid `prisma.room.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:199:36[39m
+
+[31m  196 console.log("Final room data for Prisma:", roomData)[39m
+[31m  197 [39m
+[31m  198 try {[39m
+[31m→ 199   const room = await prisma.room.create([39m
+[31mThe column `options` does not exist in the current database.[39m
+2025-06-25 01:06:53:653 [31merror[39m: [31mError caught by error handler: You do not have permission to perform this action[39m
+2025-06-25 01:07:16:716 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:75:44[39m
+
+[31m  72 [39m
+[31m  73 console.log("Checking existing vote with where clause:", whereClause)[39m
+[31m  74 [39m
+[31m→ 75 const existingVote = await prisma.vote.findFirst({[39m
+[31m       where: {[39m
+[31m         roomId: "cmcb71etc00026p4qcii54j0c",[39m
+[31m         guestId: "guest_1750810036262_0.6885426079509132",[39m
+[31m         ~~~~~~~[39m
+[31m     ?   AND?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   OR?: VoteWhereInput[],[39m
+[31m     ?   NOT?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   id?: StringFilter | String,[39m
+[31m     ?   option?: StringFilter | String,[39m
+[31m     ?   userId?: StringFilter | String,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   user?: UserScalarRelationFilter | UserWhereInput,[39m
+[31m     ?   room?: RoomScalarRelationFilter | RoomWhereInput[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown argument `guestId`. Available options are marked with ?.[39m
+2025-06-25 01:10:57:1057 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:95:36[39m
+
+[31m  92 console.log("Creating vote with data:", voteData)[39m
+[31m  93 [39m
+[31m  94 // Create vote[39m
+[31m→ 95 const vote = await prisma.vote.create([39m
+[31mForeign key constraint violated on the constraint: `votes_userId_fkey`[39m
+2025-06-25 01:20:15:2015 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findFirst()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:75:44[39m
+
+[31m  72 [39m
+[31m  73 console.log("Checking existing vote with where clause:", whereClause)[39m
+[31m  74 [39m
+[31m→ 75 const existingVote = await prisma.vote.findFirst({[39m
+[31m       where: {[39m
+[31m         roomId: "cmcb71etc00026p4qcii54j0c",[39m
+[31m         guestId: "guest_1750810814864_0.18131547177915253",[39m
+[31m         ~~~~~~~[39m
+[31m     ?   AND?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   OR?: VoteWhereInput[],[39m
+[31m     ?   NOT?: VoteWhereInput | VoteWhereInput[],[39m
+[31m     ?   id?: StringFilter | String,[39m
+[31m     ?   option?: StringFilter | String,[39m
+[31m     ?   userId?: StringFilter | String,[39m
+[31m     ?   createdAt?: DateTimeFilter | DateTime,[39m
+[31m     ?   user?: UserScalarRelationFilter | UserWhereInput,[39m
+[31m     ?   room?: RoomScalarRelationFilter | RoomWhereInput[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mUnknown argument `guestId`. Available options are marked with ?.[39m
+2025-06-25 01:21:09:219 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 01:22:06:226 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 01:22:40:2240 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:23:46:2346 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:24:12:2412 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:32:16:3216 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 01:32:25:3225 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 01:34:10:3410 [31merror[39m: [31mError caught by error handler: You do not have permission to perform this action[39m
+2025-06-25 01:37:26:3726 [31merror[39m: [31mError caught by error handler: You do not have permission to perform this action[39m
+2025-06-25 01:39:46:3946 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 01:40:09:409 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 01:40:15:4015 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 01:41:25:4125 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 01:49:36:4936 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 01:52:36:5236 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:52:55:5255 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:52:55:5255 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:52:59:5259 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 01:53:11:5311 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:53:11:5311 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:53:14:5314 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 01:57:39:5739 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 01:57:48:5748 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 02:06:38:638 [31merror[39m: [31mError caught by error handler: The user belonging to this token does no longer exist.[39m
+2025-06-25 02:07:11:711 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 02:08:40:840 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 02:10:39:1039 [31merror[39m: [31mError caught by error handler: Failed to create room: [39m
+[31mInvalid `prisma.room.create()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:199:36[39m
+
+[31m  196 console.log("Final room data for Prisma:", roomData)[39m
+[31m  197 [39m
+[31m  198 try {[39m
+[31m→ 199   const room = await prisma.room.create([39m
+[31mThe column `options` does not exist in the current database.[39m
+2025-06-25 02:13:43:1343 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/room.controller.ts:100:35[39m
+
+[31m   97   return next(new AppError("You must be logged in to view your rooms", 401))[39m
+[31m   98 }[39m
+[31m   99 [39m
+[31m→ 100 const rooms = await prisma.room.findMany([39m
+[31mThe column `rooms.options` does not exist in the current database.[39m
+2025-06-25 02:18:26:1826 [31merror[39m: [31mError caught by error handler: You are not logged in! Please log in to get access.[39m
+2025-06-25 02:32:53:3253 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 03:04:15:415 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 03:21:00:210 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 03:23:03:233 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 03:25:25:2525 [31merror[39m: [31mError caught by error handler: Failed to cast vote. Please try again.[39m
+2025-06-25 03:39:25:3925 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 03:44:02:442 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 03:59:55:5955 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 04:00:55:055 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 07:46:43:4643 [31merror[39m: [31mError caught by error handler: Invalid email or password[39m
+2025-06-25 09:48:55:4855 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 10:11:59:1159 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:283:36[39m
+
+[31m  280 console.log("=== GET VOTE RESULTS ===")[39m
+[31m  281 console.log("Room ID:", roomId)[39m
+[31m  282 [39m
+[31m→ 283 const room = await prisma.room.findUnique([39m
+[31mCan't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-25 10:43:59:4359 [31merror[39m: [31mError caught by error handler: You do not have permission to perform this action[39m
+2025-06-25 10:45:22:4522 [31merror[39m: [31mFailed to connect to database: Can't reach database server at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`[39m
+
+[31mPlease make sure your database server is running at `dpg-d1c0qph5pdvs73ebeccg-a.oregon-postgres.render.com:5432`.[39m
+2025-06-25 10:46:38:4638 [31merror[39m: [31mError caught by error handler: You do not have permission to perform this action[39m
+2025-06-25 13:18:01:181 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 13:18:32:1832 [31merror[39m: [31mError caught by error handler: Invalid token. Please log in again.[39m
+2025-06-25 14:23:50:2350 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.vote.findMany()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:292:37[39m
+
+[31m  289 }[39m
+[31m  290 [39m
+[31m  291 // Get all votes for this room[39m
+[31m→ 292 const votes = await prisma.vote.findMany([39m
+[31mServer has closed the connection.[39m
+2025-06-25 14:26:40:2640 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:163:36[39m
+
+[31m  160 console.log("Cookies:", req.cookies)[39m
+[31m  161 [39m
+[31m  162 // Check if room exists[39m
+[31m→ 163 const room = await prisma.room.findUnique([39m
+[31mTimed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 25)[39m
+2025-06-25 14:26:40:2640 [31merror[39m: [31mError caught by error handler: [39m
+[31mInvalid `prisma.room.findUnique()` invocation in[39m
+[31m/Users/olamilekanadeyemi/voting_backend/src/controllers/v1/vote.controller.ts:283:36[39m
+
+[31m  280 console.log("=== GET VOTE RESULTS ===")[39m
+[31m  281 console.log("Room ID:", roomId)[39m
+[31m  282 [39m
+[31m→ 283 const room = await prisma.room.findUnique([39m
+[31mTimed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 25)[39m

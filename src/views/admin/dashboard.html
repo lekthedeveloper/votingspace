@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API Management Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      :root {
+          --primary: #6366f1;
+          --primary-hover: #5b21b6;
+          --secondary: #06b6d4;
+          --accent: #10b981;
+          --accent-light: #6ee7b7;
+          --success: #22c55e;
+          --danger: #f43f5e;
+          --warning: #f59e0b;
+          --gray-50: #f9fafb;
+          --gray-100: #f3f4f6;
+          --gray-200: #e5e7eb;
+          --gray-600: #4b5563;
+          --gray-700: #374151;
+          --gray-800: #1f2937;
+          --white: #ffffff;
+          --background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdf4 100%);
+          --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+          --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      }
+
+      body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          background: var(--background);
+          color: var(--gray-700);
+          line-height: 1.6;
+          min-height: 100vh;
+      }
+
+      .header {
+          background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+          color: var(--white);
+          padding: 1.5rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: var(--shadow-lg);
+      }
+
+      .header h1 {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+      }
+
+      .nav {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+      }
+
+      .nav a {
+          color: rgba(255, 255, 255, 0.9);
+          text-decoration: none;
+          padding: 0.75rem 1.25rem;
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          font-size: 0.9rem;
+      }
+
+      .nav a:hover,
+      .nav a.active {
+          background: rgba(255, 255, 255, 0.2);
+          color: var(--white);
+      }
+
+      .container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 2rem;
+      }
+
+      .section {
+          background: var(--white);
+          border-radius: 16px;
+          padding: 2rem;
+          margin-bottom: 1.5rem;
+          box-shadow: var(--shadow-lg);
+          border: 1px solid var(--gray-200);
+      }
+
+      .section h2 {
+          margin-bottom: 1.5rem;
+          color: var(--gray-800);
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-size: 1.25rem;
+          font-weight: 700;
+      }
+
+      .status-indicator {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: var(--accent);
+          margin-right: 0.75rem;
+          animation: pulse 2s infinite;
+      }
+
+      .status-indicator.error {
+          background: var(--danger);
+      }
+
+      @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.1); }
+      }
+
+      .health-status {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          padding: 1.5rem;
+          background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+          border: 1px solid var(--accent-light);
+          border-radius: 12px;
+      }
+
+      .health-status.error {
+          background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+          border-color: #fca5a5;
+      }
+
+      .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.875rem 1.5rem;
+          background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+          color: var(--white);
+          text-decoration: none;
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          font-weight: 600;
+          font-size: 0.9rem;
+          border: none;
+          cursor: pointer;
+      }
+
+      .btn:hover {
+          transform: translateY(-2px);
+      }
+
+      .btn.secondary {
+          background: linear-gradient(135deg, var(--gray-600) 0%, var(--gray-700) 100%);
+      }
+
+      .btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none !important;
+      }
+
+      .metric {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid var(--gray-100);
+      }
+
+      .metric:last-child {
+          border-bottom: none;
+      }
+
+      .metric-label {
+          font-weight: 500;
+          color: var(--gray-600);
+      }
+
+      .metric-value {
+          font-weight: 600;
+          color: var(--gray-800);
+      }
+
+      .system-info-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+      }
+
+      /* API Documentation Cards */
+      .api-docs-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 1.5rem;
+          margin-top: 1.5rem;
+      }
+
+      .api-card {
+          background: var(--white);
+          border: 1px solid var(--gray-200);
+          border-radius: 16px;
+          padding: 1.5rem;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .api-card:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-lg);
+      }
+
+      .api-card-header {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid var(--gray-100);
+      }
+
+      .api-card-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
+      .api-card-icon.health {
+          background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+          color: #166534;
+      }
+
+      .api-card-icon.rooms {
+          background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+          color: #1d4ed8;
+      }
+
+      .api-card-icon.vote {
+          background: linear-gradient(135deg, #fef3c7, #fde68a);
+          color: #92400e;
+      }
+
+      .api-card-icon.info {
+          background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+          color: #0369a1;
+      }
+
+      .api-card-title {
+          flex: 1;
+      }
+
+      .api-card-title h3 {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: var(--gray-800);
+          margin-bottom: 0.25rem;
+      }
+
+      .api-card-title p {
+          font-size: 0.9rem;
+          color: var(--gray-600);
+      }
+
+      .api-card-content {
+          margin-bottom: 1rem;
+      }
+
+      .api-card-content h4 {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--gray-700);
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+      }
+
+      .api-card-content p {
+          font-size: 0.95rem;
+          color: var(--gray-600);
+          line-height: 1.5;
+          margin-bottom: 1rem;
+      }
+
+      .api-example {
+          background: var(--gray-50);
+          border: 1px solid var(--gray-200);
+          border-radius: 8px;
+          padding: 1rem;
+          font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+          font-size: 0.85rem;
+          color: var(--gray-700);
+          margin-bottom: 1rem;
+      }
+
+      .api-example-title {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--gray-600);
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+      }
+
+      .api-response {
+          background: #f0fdf4;
+          border: 1px solid #bbf7d0;
+          border-radius: 8px;
+          padding: 1rem;
+          font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+          font-size: 0.85rem;
+          color: #166534;
+      }
+
+      .quick-links {
+          display: flex;
+          gap: 0.75rem;
+          margin-top: 1rem;
+          flex-wrap: wrap;
+      }
+
+      .quick-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          background: var(--gray-100);
+          color: var(--gray-700);
+          text-decoration: none;
+          border-radius: 8px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+      }
+
+      .quick-link:hover {
+          background: var(--primary);
+          color: var(--white);
+          transform: translateY(-1px);
+      }
+
+      @media (max-width: 768px) {
+          .container {
+              padding: 1rem;
+          }
+
+          .header {
+              padding: 1rem;
+              flex-direction: column;
+              gap: 1rem;
+              text-align: center;
+          }
+
+          .section {
+              padding: 1.5rem;
+          }
+
+          .health-status {
+              flex-direction: column;
+              text-align: center;
+              gap: 1rem;
+          }
+
+          .system-info-grid {
+              grid-template-columns: 1fr;
+              gap: 1rem;
+          }
+
+          .api-docs-grid {
+              grid-template-columns: 1fr;
+              gap: 1rem;
+          }
+
+          .api-card {
+              padding: 1.25rem;
+          }
+      }
+  </style>
+</head>
+<body>
+  <div class="header">
+      <h1>⚡ API Management Dashboard</h1>
+      <nav class="nav">
+          <a href="/admin/dashboard" class="active">Dashboard</a>
+          <a href="/api-docs">API Docs</a>
+          <a href="/admin/logout">Logout</a>
+      </nav>
+  </div>
+  
+  <div class="container">
+      <!-- API Health Status -->
+      <div class="section">
+          <h2>🔍 System Health</h2>
+          <div class="health-status" id="healthStatus">
+              <span class="status-indicator" id="healthIndicator"></span>
+              <div style="flex: 1;">
+                  <strong style="color: var(--gray-800); font-size: 1.1rem;" id="healthMessage">Ready to check API status</strong>
+                  <div style="font-size: 0.9rem; color: var(--gray-600); margin-top: 0.25rem;" id="healthDetails">
+                      Click "Check Health" to test the API connection
+                  </div>
+              </div>
+              <button class="btn secondary" onclick="checkHealth()" id="healthButton">
+                  🔍 Check Health
+              </button>
+          </div>
+      </div>
+
+      <!-- API Documentation Cards -->
+      <div class="section">
+          <h2>📚 API Guide - How to Use Our Endpoints</h2>
+          <p style="color: var(--gray-600); margin-bottom: 1rem;">
+              Simple explanations of what each API endpoint does and how to use them. Perfect for non-technical team members!
+          </p>
+          
+          <div class="api-docs-grid">
+              <!-- Health Check Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon health">❤️</div>
+                      <div class="api-card-title">
+                          <h3>Health Check</h3>
+                          <p>Check if the API is working properly</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it does</h4>
+                      <p>This endpoint tells you if the server is running and healthy. It's like asking "Are you okay?" to the API.</p>
+                      
+                      <div class="api-example-title">How to use it</div>
+                      <div class="api-example">GET /health</div>
+                      
+                      <div class="api-example-title">What you get back</div>
+                      <div class="api-response">
+{
+  "status": "success",
+  "message": "Server is running",
+  "timestamp": "2025-06-22T19:01:56.777Z",
+  "environment": "development"
+}
+                      </div>
+                  </div>
+                  <div class="quick-links">
+                      <button class="quick-link" onclick="checkHealth()">🧪 Test Now</button>
+                  </div>
+              </div>
+
+              <!-- API Info Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon info">ℹ️</div>
+                      <div class="api-card-title">
+                          <h3>API Information</h3>
+                          <p>Get basic information about the API</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it does</h4>
+                      <p>Shows you basic information about the API, like version number and available features. Think of it as the "About" page.</p>
+                      
+                      <div class="api-example-title">How to use it</div>
+                      <div class="api-example">GET /api/v1</div>
+                      
+                      <div class="api-example-title">What you get back</div>
+                      <div class="api-response">
+{
+  "name": "Voting API",
+  "version": "1.0.0",
+  "description": "API for managing voting rooms"
+}
+                      </div>
+                  </div>
+                  <div class="quick-links">
+                      <button class="quick-link" onclick="testApiEndpoint()">🧪 Test Now</button>
+                  </div>
+              </div>
+
+              <!-- Create Room Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon rooms">🏠</div>
+                      <div class="api-card-title">
+                          <h3>Create Voting Room</h3>
+                          <p>Create a new room for people to vote</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it does</h4>
+                      <p>Creates a new voting room where people can submit and vote on ideas. Like setting up a suggestion box with voting capabilities.</p>
+                      
+                      <div class="api-example-title">How to use it</div>
+                      <div class="api-example">POST /api/v1/rooms
+Content-Type: application/json
+
+{
+  "title": "Team Meeting Ideas",
+  "description": "Suggest topics for our next meeting"
+}</div>
+                      
+                      <div class="api-example-title">What you get back</div>
+                      <div class="api-response">
+{
+  "id": "room123",
+  "title": "Team Meeting Ideas",
+  "status": "created",
+  "joinCode": "ABC123"
+}
+                      </div>
+                  </div>
+                  <div class="quick-links">
+                      <button class="quick-link" onclick="alert('Use a tool like Postman or curl to test POST requests')">🧪 Test POST</button>
+                  </div>
+              </div>
+
+              <!-- Get Room Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon rooms">📋</div>
+                      <div class="api-card-title">
+                          <h3>Get Room Details</h3>
+                          <p>View information about a specific room</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it does</h4>
+                      <p>Gets all the details about a voting room, including all the suggestions and their vote counts. Like looking inside the suggestion box.</p>
+                      
+                      <div class="api-example-title">How to use it</div>
+                      <div class="api-example">GET /api/v1/rooms/room123</div>
+                      
+                      <div class="api-example-title">What you get back</div>
+                      <div class="api-response">
+{
+  "id": "room123",
+  "title": "Team Meeting Ideas",
+  "suggestions": [
+    {
+      "id": "suggestion1",
+      "text": "Discuss new project",
+      "votes": 5
+    }
+  ]
+}
+                      </div>
+                  </div>
+                  <div class="quick-links">
+                      <button class="quick-link" onclick="alert('Replace room123 with an actual room ID to test')">🔍 View Example</button>
+                  </div>
+              </div>
+
+              <!-- Vote Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon vote">🗳️</div>
+                      <div class="api-card-title">
+                          <h3>Submit Vote</h3>
+                          <p>Vote on suggestions in a room</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it does</h4>
+                      <p>Lets people vote on suggestions in a room. Like putting a checkmark next to your favorite idea in the suggestion box.</p>
+                      
+                      <div class="api-example-title">How to use it</div>
+                      <div class="api-example">POST /api/v1/vote
+Content-Type: application/json
+
+{
+  "roomId": "room123",
+  "suggestionId": "suggestion1",
+  "userId": "user456"
+}</div>
+                      
+                      <div class="api-example-title">What you get back</div>
+                      <div class="api-response">
+{
+  "success": true,
+  "message": "Vote recorded",
+  "newVoteCount": 6
+}
+                      </div>
+                  </div>
+                  <div class="quick-links">
+                      <button class="quick-link" onclick="alert('Use a tool like Postman or curl to test POST requests')">🗳️ Test Vote</button>
+                  </div>
+              </div>
+
+              <!-- Swagger Documentation Card -->
+              <div class="api-card">
+                  <div class="api-card-header">
+                      <div class="api-card-icon info">📖</div>
+                      <div class="api-card-title">
+                          <h3>Technical Documentation</h3>
+                          <p>Detailed API documentation for developers</p>
+                      </div>
+                  </div>
+                  <div class="api-card-content">
+                      <h4>What it is</h4>
+                      <p>Complete technical documentation with all the details developers need. Includes request/response examples, error codes, and interactive testing.</p>
+                      
+                      <div class="api-example-title">Perfect for</div>
+                      <div class="api-example">• Developers integrating with the API
+• Testing API endpoints interactively
+• Understanding all available parameters
+• Viewing detailed error responses</div>
+                  </div>
+                  <div class="quick-links">
+                      <a href="/api-docs" class="quick-link">📚 View Swagger Docs</a>
+                      <button class="quick-link" onclick="checkHealth()">🧪 Quick Test</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- System Information -->
+      <div class="section">
+          <h2>💻 System Information</h2>
+          <div class="system-info-grid">
+              <div>
+                  <div class="metric">
+                      <span class="metric-label">Platform</span>
+                      <span class="metric-value">{{PLATFORM}}</span>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">Memory Usage</span>
+                      <span class="metric-value">{{MEMORY_USED}} MB</span>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">Uptime</span>
+                      <span class="metric-value">{{UPTIME}}</span>
+                  </div>
+              </div>
+              <div>
+                  <div class="metric">
+                      <span class="metric-label">Memory Total</span>
+                      <span class="metric-value">{{MEMORY_TOTAL}} MB</span>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">Environment</span>
+                      <span class="metric-value">{{ENVIRONMENT}}</span>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">API Version</span>
+                      <span class="metric-value">{{API_VERSION}}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      async function checkHealth() {
+          const button = document.getElementById('healthButton');
+          const healthStatus = document.getElementById('healthStatus');
+          const healthIndicator = document.getElementById('healthIndicator');
+          const healthMessage = document.getElementById('healthMessage');
+          const healthDetails = document.getElementById('healthDetails');
+
+          button.disabled = true;
+          button.innerHTML = '🔄 Checking...';
+
+          try {
+              const startTime = Date.now();
+              const response = await fetch('/health');
+              const responseTime = Date.now() - startTime;
+              
+              if (response.ok) {
+                  const data = await response.json();
+                  
+                  healthStatus.className = 'health-status';
+                  healthIndicator.className = 'status-indicator';
+                  healthMessage.textContent = data.message || 'API is operational';
+                  
+                  const timestamp = new Date(data.timestamp);
+                  healthDetails.innerHTML = `✅ Last checked: ${timestamp.toLocaleTimeString()} | Environment: ${data.environment} | Response time: ${responseTime}ms`;
+
+                  button.innerHTML = '✅ Healthy';
+                  setTimeout(() => {
+                      button.innerHTML = '🔍 Check Again';
+                      button.disabled = false;
+                  }, 2000);
+              } else {
+                  throw new Error(`HTTP ${response.status}`);
+              }
+          } catch (error) {
+              console.error('Health check failed:', error);
+              
+              healthStatus.className = 'health-status error';
+              healthIndicator.className = 'status-indicator error';
+              healthMessage.textContent = 'API is not responding';
+              healthDetails.innerHTML = `❌ Last check failed: ${new Date().toLocaleTimeString()} | Error: ${error.message}`;
+
+              button.innerHTML = '❌ Failed';
+              setTimeout(() => {
+                  button.innerHTML = '🔍 Try Again';
+                  button.disabled = false;
+              }, 2000);
+          }
+      }
+
+      async function testApiEndpoint() {
+          try {
+              const response = await fetch('/api/v1');
+              if (response.ok) {
+                  const data = await response.json();
+                  alert(`✅ API Endpoint Test Result:\n\n${JSON.stringify(data, null, 2)}`);
+              } else {
+                  throw new Error(`HTTP ${response.status}`);
+              }
+          } catch (error) {
+              alert(`❌ API Endpoint Test Failed:\n\nError: ${error.message}`);
+          }
+      }
+  </script>
+</body>
+</html>

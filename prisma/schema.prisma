@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  rooms     Room[]   @relation("RoomCreator")
+  votes     Vote[]
+
+  @@map("users")
+}
+
+model Room {
+  id                 String    @id @default(cuid())
+  title              String
+  description        String?
+  options            String[]
+  isActive           Boolean   @default(true)
+  isClosed           Boolean   @default(false)
+  isAnonymous        Boolean   @default(true)
+  allowMultipleVotes Boolean   @default(false)
+  joinCode           String    @unique
+  deadline           DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  // Relations
+  creatorId String
+  creator   User   @relation("RoomCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  votes     Vote[]
+
+  @@map("rooms")
+}
+
+model Vote {
+  id        String   @id @default(cuid())
+  option    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  roomId    String
+  
+  // For authenticated users - optional now
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // For guest users - new field
+  guestId   String?
+  
+  // Room relationship
+  room      Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  
+  // Ensure either userId OR guestId is set, but not both
+  // This prevents duplicate votes for the same user/guest in the same room
+  @@unique([userId, roomId], name: "user_room_vote")
+  @@unique([guestId, roomId], name: "guest_room_vote")
+  @@map("votes")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
