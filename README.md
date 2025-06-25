@@ -32,7 +32,7 @@ A robust backend API for anonymous collaborative decision-making through voting.
 
 - Node.js 18+
 - PostgreSQL 15+
-- PNPM (recommended) or NPM
+- NPM (Node Package Manager)
 
 ### 2. 📦 Installation
 
@@ -42,7 +42,7 @@ git clone https://github.com/your-repo/voting-app-backend.git
 cd voting-app-backend
 
 # Install dependencies
-pnpm install  # or npm install
+npm install
 
 # Set up environment variables
 cp .env.example .env
@@ -76,24 +76,58 @@ EMAIL_PASSWORD=your_password
 ### 4. 🗄️ Database Setup
 
 ```bash
-# Run migrations
-pnpm prisma migrate dev --name init
+# Initialize Prisma (if starting fresh)
+npx prisma init
+
+# Run migrations to create database tables
+npx prisma migrate dev --name init
 
 # Generate Prisma client
-pnpm prisma generate
+npx prisma generate
 
-# Optional: Seed database
-pnpm prisma db seed
+# Optional: Seed database with initial data
+npx prisma db seed
+
+# View your database in Prisma Studio
+npx prisma studio
 ```
 
-### 5. 🏃‍♂️ Running the App
+## 5. 🔄 Prisma Commands
+
+```bash
+# Initialize Prisma in your project
+npx prisma init
+
+# Create and apply a new migration
+npx prisma migrate dev --name your_migration_name
+
+# Generate Prisma client after schema changes
+npx prisma generate
+
+# Reset database (WARNING: This will delete all data)
+npx prisma migrate reset
+
+# Deploy migrations to production
+npx prisma migrate deploy
+
+# Open Prisma Studio (database GUI)
+npx prisma studio
+
+# Format your Prisma schema
+npx prisma format
+
+# Validate your Prisma schema
+npx prisma validate
+```
+
+### 6. 🏃‍♂️ Running the App
 
 ```bash
 # Development mode (watch)
-pnpm dev
+npm run dev
 
 # Production build
-pnpm build && pnpm start
+npm run build && npm start
 ```
 
 ## 📖 API Documentation
@@ -137,16 +171,16 @@ docker run -p 5000:5000 --env-file .env voting-backend
 
 ```bash
 # Run tests
-pnpm test
+npm test
 
 # Lint code
-pnpm lint
+npm run lint
 
 # Format code
-pnpm format
+npm run format
 
 # Prisma studio (database GUI)
-pnpm prisma studio
+npx prisma studio
 ```
 
 ## 🌍 Environment Variables
@@ -164,17 +198,46 @@ pnpm prisma studio
 ## 📁 Project Structure
 
 ```
-─ 📁 prisma/         # database schema and migration files
-src/
-├── 📁 config/         # Configuration files
-├── 📁 controllers/    # Route controllers
-├── 📁 middleware/     # Custom middleware
-├── 📁 models/         # Database models
-├── 📁 routes/         # API route definitions
-├── 📁 services/       # Business logic
-├── 📁 types/          # TypeScript interfaces
-├── 📁 utils/          # Helper functions
-├── 📁 validations/    # Request validations
-├── 📄 app.ts          # Express app setup
-└── 📄 server.ts       # Server entry point
+voting_backend/
+├── 📁 logs/              # Application logs
+├── 📁 node_modules/      # Dependencies
+├── 📁 prisma/            # Database schema and migrations
+│   ├── 📁 migrations/    # Database migration files
+│   │   ├── 📄 20250622145215_init/
+│   │   ├── 📄 20250622205023_add_password_field/
+│   │   └── 📄 20250625011600_sync_database_schema/
+│   ├── 📄 migration_lock.toml
+│   └── 📄 schema.prisma  # Prisma schema definition
+├── 📁 src/               # Source code
+│   ├── 📁 config/        # Configuration files
+│   ├── 📁 controllers/   # Route controllers
+│   ├── 📁 middleware/    # Custom middleware
+│   ├── 📁 models/        # Database models
+│   ├── 📁 routes/        # API route definitions
+│   ├── 📁 services/      # Business logic
+│   ├── 📁 types/         # TypeScript interfaces
+│   ├── 📁 utils/         # Helper functions
+│   ├── 📁 validations/   # Request validations
+│   ├── 📁 views/         # View templates
+│   ├── 📄 app.ts         # Express app setup
+│   └── 📄 server.ts      # Server entry point
+├── 📄 .env               # Environment variables
+├── 📄 .env.example       # Environment template
+├── 📄 .gitignore         # Git ignore rules
+├── 📄 check-tables.js    # Database table checker
+├── 📄 generate-secrets.js # Secret generation utility
+├── 📄 package-lock.json  # NPM lock file
+├── 📄 package.json       # Project dependencies
+├── 📄 README.md          # Project documentation
+├── 📄 test-db-connection.js # Database connection test
+├── 📄 test-prisma-client.js # Prisma client test
+└── 📄 tsconfig.json      # TypeScript configuration
 ```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
