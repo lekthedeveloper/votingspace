@@ -19,15 +19,7 @@
     "health-check": "curl http://localhost:5005/health || echo 'Server not running'",
     "start:prod": "npm run build && npm start"
   },
-  "keywords": [
-    "voting",
-    "decision",
-    "collaborative",
-    "backend",
-    "api",
-    "express",
-    "typescript"
-  ],
+  "keywords": ["voting", "decision", "collaborative", "backend", "api", "express", "typescript"],
   "author": "Your Name",
   "license": "ISC",
   "type": "commonjs",
@@ -53,7 +45,10 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "winston": "^3.11.0",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -82,10 +77,7 @@
     "prettier": "^3.1.1",
     "prisma": "^6.10.1",
     "supertest": "^6.3.3",
-    "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.3.2"
+    "ts-jest": "^29.1.1"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -97,28 +89,17 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "roots": [
-      "<rootDir>/src"
-    ],
+    "roots": ["<rootDir>/src"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "moduleNameMapping": {
       "^@/(.*)$": "<rootDir>/src/$1"
     },
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/tests/setup.ts"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "!src/**/*.d.ts",
-      "!src/tests/**/*"
-    ]
+    "setupFilesAfterEnv": ["<rootDir>/src/tests/setup.ts"],
+    "collectCoverageFrom": ["src/**/*.{ts,tsx}", "!src/**/*.d.ts", "!src/tests/**/*"]
   },
   "lint-staged": {
-    "**/*.{ts,json}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "**/*.{ts,json}": ["eslint --fix", "prettier --write"]
   }
 }
