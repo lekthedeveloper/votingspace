@@ -1,0 +1,52 @@
+voting-app-backend/
+├── .env
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── prisma/
+│   ├── schema.prisma
+│   └── migrations/
+├── src/
+│   ├── config/
+│   │   ├── config.ts
+│   │   └── constants.ts
+│   ├── controllers/
+│   │   ├── v1/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── room.controller.ts
+│   │   │   └── vote.controller.ts
+│   ├── middleware/
+│   │   ├── auth.middleware.ts
+│   │   ├── error.middleware.ts
+│   │   ├── rateLimit.middleware.ts
+│   │   ├── validate.middleware.ts
+│   │   └── response.middleware.ts
+│   ├── models/
+│   │   └── prisma.client.ts
+│   ├── routes/
+│   │   ├── v1/
+│   │   │   ├── auth.routes.ts
+│   │   │   ├── room.routes.ts
+│   │   │   └── vote.routes.ts
+│   ├── services/
+│   │   ├── v1/
+│   │   │   ├── auth.service.ts
+│   │   │   ├── room.service.ts
+│   │   │   └── vote.service.ts
+│   ├── types/
+│   │   ├── enums/
+│   │   │   └── user.role.enum.ts
+│   │   ├── interfaces/
+│   │   │   ├── auth.interface.ts
+│   │   │   └── room.interface.ts
+│   ├── utils/
+│   │   ├── apiFeatures.ts
+│   │   ├── appError.ts
+│   │   └── logger.ts
+│   ├── validations/
+│   │   ├── auth.validation.ts
+│   │   ├── room.validation.ts
+│   │   └── vote.validation.ts
+│   ├── app.ts
+│   └── server.ts
+└── README.md

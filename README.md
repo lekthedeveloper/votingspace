@@ -164,6 +164,7 @@ pnpm prisma studio
 ## 📁 Project Structure
 
 ```
+─ 📁 prisma/         # database schema and migration files
 src/
 ├── 📁 config/         # Configuration files
 ├── 📁 controllers/    # Route controllers
